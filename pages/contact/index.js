@@ -1,4 +1,3 @@
-import Circles from '../components/Circles'; 
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
