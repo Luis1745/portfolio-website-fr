@@ -35,38 +35,38 @@ export const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <AiOutlineConsoleSql />,
-          <FaWordpress />,
-          <FaDrupal />
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="javascript" />,
+          <FaReact key="react" />,
+          <SiNextdotjs key="nextjs" />,
+          <SiFramer key="framer" />,
+          <AiOutlineConsoleSql key="sql" />,
+          <FaWordpress key="wordpress" />,
+          <FaDrupal key="drupal" />
         ],
       },
       {
         title: 'UI/UX Design',
         icons: [
-          <FaFigma />,
-          <SiAdobexd />,
-          <SiAdobephotoshop />
+          <FaFigma key="figma" />,
+          <SiAdobexd key="adxd" />,
+          <SiAdobephotoshop key="adphotoshop" />
         ],
       },
       {
         title: 'Video Production Suite',
         icons: [
-          <SiAdobeaftereffects />,
-          <SiAdobepremierepro />,
+          <SiAdobeaftereffects key="adae" />,
+          <SiAdobepremierepro key="adpremiere" />,
         ],
       },
       {
         title: 'Other Programming Languages',
         icons: [
-          <FaJava />,
-          <FaPython />,
-          <FaPhp />,
+          <FaJava key="java" />,
+          <FaPython key="python" />,
+          <FaPhp key="php" />,
         ],
       },
     ],
