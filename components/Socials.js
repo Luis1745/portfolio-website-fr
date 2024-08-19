@@ -22,7 +22,7 @@ const Socials = () => {
       <Link href={'https://wa.me/523171111096'} className='hover:text-green-600 transition-all duration-300'>
         <RiWhatsappFill />
       </Link>
-      <Link href={''} className='hover:text-cyan-700 transition-all duration-300'>
+      <Link href={'https://www.linkedin.com/in/luis-fernando-regalado-90aba0222/'} className='hover:text-cyan-700 transition-all duration-300'>
         <RiLinkedinFill/>
       </Link>
     </div>

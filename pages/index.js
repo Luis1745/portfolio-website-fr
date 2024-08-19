@@ -20,7 +20,7 @@ const Home = () => {
             exit='hidden'
             className='h1'
           >
-            Transforming Ideas <br /> Into{' '} <span className='text-accent'>Digital Reality</span>
+            Unleash the Power<br />of{' '} <span className='text-accent'>Digital Innovation</span>
           </motion.h1>
           <motion.p
             variants={fadeIn('down', 0.3)}
@@ -29,9 +29,9 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Aute aliquip amet ex reprehenderit tempor culpa enim consequat duis nostrud aliquip.
-            Nulla veniam irure ea sint sunt laboris nisi sunt deserunt incididunt.
-            Pariatur pariatur cillum laborum aliqua anim consequat nulla minim.
+            Transform your business with custom-built websites, apps, and software designed for excellence.
+            I create digital experiences that captivate and drive results, turning your ideas into powerful tools for success.
+            Let’s push the boundaries of what’s possible.
           </motion.p>
 
           <div className='flex justify-center xl:hidden relative'>
