@@ -13,7 +13,7 @@ const Socials = () => {
       <Link href={'https://www.youtube.com/@luisfernandoregalado6322'} className='hover:text-accent transition-all duration-300'>
         <RiYoutubeFill />
       </Link>
-      <Link href={''} className='hover:text-fuchsia-600 transition-all duration-300'>
+      <Link href={'https://www.instagram.com/luis_fernando1745?igsh=MWY5bWpyMjN6NHZmcg=='} className='hover:text-fuchsia-600 transition-all duration-300'>
         <RiInstagramFill />
       </Link>
       <Link href={'https://www.facebook.com/profile.php?id=100016138113874&mibextid=ZbWKwL'} className='hover:text-indigo-600 transition-all duration-300'>
