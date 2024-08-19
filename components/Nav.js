@@ -34,7 +34,7 @@ const Nav = () => {
     bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen'>
       {/* inner */}
       <div className='flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 
-      md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
+      md:px-40 xl:px-0 h-[60px] xl:h-max py-6 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
         {navData.map((link, index) => {
           return (
             <Link
@@ -43,7 +43,7 @@ const Nav = () => {
               href={link.path}
               key={index}
             >
-              <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
+              <div className='absolute pr-10 right-0 hidden xl:group-hover:flex'>
                 <div className='bg-white relative flex text-primary items-center 
                 p-[6px] rounded[3px]'>
                   <div className='text-[12px] leading-none font-semibold capitalize'>{link.name}</div>
@@ -53,7 +53,7 @@ const Nav = () => {
                 </div>
               </div>
 
-              <div>{link.icon}</div>
+              <div className='sm:text-lg md:text-xl xl:text-2xl'>{link.icon}</div>
             </Link>
           );
         })}
