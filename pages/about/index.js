@@ -92,16 +92,20 @@ export const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'English for Developers & IT Professionals - Desafio Latam',
+        stage: '2025',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'Introduction to Data Analysis with Python - Desafio Latam',
+        stage: '2025',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'Introduction to Cybersecurity - Cisco Networking Academy',
+        stage: '2023',
+      },
+      {
+        title: 'Project Management with Agile Methodologies and Lean Approaches - Fundación Telefónica, MX',
+        stage: '2023',
       },
     ],
   },
@@ -137,7 +141,7 @@ const About = () => {
             exit='hidden'
             className='h2'
           >
-            Captivating <span className='text-accent'>stories</span> birth magnificent designs.
+            My <span className='text-accent'>Journey</span> as a Freelance Developer
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.4)}
@@ -146,9 +150,9 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            10 years ago, I began freelancing as a developer. Since then, I’ve
-            done remote work for agencies, consulted for startups, and
-            collaborated on digital products for business and consumer use.
+            Two years ago, I began my journey as a freelance developer. Since then, I have worked on custom websites, web applications,
+            and digital solutions, helping businesses bring their ideas to life. With a focus on quality, efficiency, and innovation,
+            I continue to grow and refine my skills to deliver the best results for my clients.
           </motion.p>
           {/* Counters */}
           <motion.div
@@ -171,7 +175,7 @@ const About = () => {
               {/* Clients */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={100} duration={5} /> +
+                  <CountUp start={0} end={20} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
                   Satisfied clients
