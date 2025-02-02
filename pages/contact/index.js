@@ -14,15 +14,16 @@ const Contact = () => {
     e.preventDefault();
     setStatus({ sending: true, success: false, error: '' });
 
-    // Validación honeypot
+    // Honeypot validation
     if (e.target.honeyPot.value) {
-      setStatus({ sending: false, success: false, error: 'Bot detectado' });
+      setStatus({ sending: false, success: false, error: 'Bot detected' });
       return;
     }
 
     const formData = {
       name: e.target.name.value,
       email: e.target.email.value,
+      subject: e.target.subject.value,
       message: e.target.message.value
     };
 
@@ -33,7 +34,11 @@ const Contact = () => {
         body: JSON.stringify(formData)
       });
 
-      if (!response.ok) throw new Error('Error al enviar');
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Error sending message');
+      }
 
       setStatus({ sending: false, success: true, error: '' });
       e.target.reset();
@@ -46,7 +51,7 @@ const Contact = () => {
       setStatus({
         sending: false,
         success: false,
-        error: error.message || 'Error inesperado'
+        error: error.message || 'An error occurred'
       });
     }
   };
@@ -65,7 +70,7 @@ const Contact = () => {
             Let’s <span className='text-accent'>connect.</span>
           </motion.h2>
 
-          {/* Mensajes de estado */}
+          {/* Status Messages */}
           {status.error && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -82,7 +87,7 @@ const Contact = () => {
               animate={{ opacity: 1 }}
               className="mb-4 p-3 bg-green-500/20 text-green-300 rounded-lg"
             >
-              ¡Mensaje enviado con éxito!
+              Message sent successfully!
             </motion.div>
           )}
 
@@ -94,7 +99,7 @@ const Contact = () => {
             exit='hidden'
             className='flex-1 flex flex-col gap-6 w-full mx-auto'
           >
-            {/* Campo honeypot */}
+            {/* Honeypot Field */}
             <input
               type="text"
               name="honeyPot"
@@ -103,43 +108,43 @@ const Contact = () => {
             />
 
             <div className='flex gap-x-6 w-full'>
-              <input
-                type='text'
+              <input 
+                type='text' 
                 name='name'
-                placeholder='Name'
+                placeholder='Your Name'
                 className='input'
                 required
                 minLength="2"
               />
-              <input
-                type='email'
+              <input 
+                type='email' 
                 name='email'
-                placeholder='Email'
+                placeholder='Your Email'
                 className='input'
                 required
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               />
             </div>
 
-            <input
-              type='text'
+            <input 
+              type='text' 
               name='subject'
               placeholder='Subject'
               className='input'
               required
               minLength="3"
             />
-
-            <textarea
+            
+            <textarea 
               name='message'
-              placeholder='Message'
+              placeholder='Your Message'
               className='textarea'
-              required
+              required 
               minLength="10"
               rows="5"
             ></textarea>
-
-            <motion.button
+            
+            <motion.button 
               type='submit'
               disabled={status.sending}
               whileHover={{ scale: 1.02 }}
